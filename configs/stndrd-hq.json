@@ -1,0 +1,17 @@
+{
+  "targetRepo": "../../Stndrd-HQ-Dashboard",
+  "leanContextSource": "github:jaymac95/lean-context",
+  "runs": 3,
+  "providers": {
+    "codex": {
+      "command": "codex",
+      "model": null,
+      "extraArgs": []
+    },
+    "claude": {
+      "command": "claude",
+      "model": null,
+      "extraArgs": []
+    }
+  }
+}
