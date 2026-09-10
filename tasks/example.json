@@ -1,0 +1,7 @@
+{
+  "id": "example-targeted-change",
+  "description": "Replace this with a representative coding task from the target repository.",
+  "prompt": "Find the implementation responsible for the target behavior, make the smallest correct change requested, and run the relevant tests. Do not make unrelated changes.",
+  "verifyCommand": "npm test",
+  "timeoutMs": 900000
+}
