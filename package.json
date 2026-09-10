@@ -1,0 +1,19 @@
+{
+  "name": "lean-context-benchmark",
+  "version": "0.1.0",
+  "description": "A/B benchmark harness for measuring Lean Context token usage, cost, latency, and task success across coding agents.",
+  "type": "module",
+  "bin": {
+    "lean-context-benchmark": "./bin/lean-context-benchmark.js",
+    "lc-bench": "./bin/lean-context-benchmark.js"
+  },
+  "scripts": {
+    "bench": "node ./bin/lean-context-benchmark.js run",
+    "compare": "node ./bin/lean-context-benchmark.js compare",
+    "doctor": "node ./bin/lean-context-benchmark.js doctor"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
+}
