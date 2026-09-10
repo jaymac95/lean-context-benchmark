@@ -1,0 +1,7 @@
+{
+  "id": "stndrd-data-as-of",
+  "description": "Cross-file shared-component task for Stndrd HQ Dashboard",
+  "prompt": "Add a reusable DataAsOf component for the dashboard. Requirements: create src/components/DataAsOf.tsx; it must accept an isoDate prop typed as string | null; return null when no date is supplied; format non-null dates by reusing the existing fmtDateFull helper from the data layer rather than duplicating date-formatting logic; render the copy `Data as of <formatted date>` in a small muted style consistent with the existing dashboard. Use this component on both the Overview page and Attendance page, sourcing the date from the existing DATA_AS_OF export. Do not modify JSON data files, scripts, package files, or legacy/. Keep the component server-compatible (do not add `use client`). Make the smallest correct change.",
+  "verifyCommand": "node -e \"const fs=require('fs');const must=['src/components/DataAsOf.tsx','src/app/page.tsx','src/app/attendance/page.tsx'];for(const f of must){if(!fs.existsSync(f)){console.error('missing '+f);process.exit(1)}}const c=fs.readFileSync(must[0],'utf8');const o=fs.readFileSync(must[1],'utf8');const a=fs.readFileSync(must[2],'utf8');if(!/fmtDateFull/.test(c)||!/Data as of/.test(c)||!/string\\s*\\|\\s*null/.test(c)||!/DataAsOf/.test(o)||!/DATA_AS_OF/.test(o)||!/DataAsOf/.test(a)||!/DATA_AS_OF/.test(a)||/[\"']use client[\"']/.test(c)){console.error('task requirements not satisfied');process.exit(1)}\"",
+  "timeoutMs": 900000
+}
